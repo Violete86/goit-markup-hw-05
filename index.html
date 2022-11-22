@@ -58,10 +58,10 @@
 
     <!--Герой-->
     <main>
-      <section class="hero section">
+      <section class="hero section f">
         <div class="container">
           <h1 class="hero-tittle">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button">Замовити послугу</button>
+          <button class="hero-btn is-hidden" data-modal-open type="button">Замовити послугу</button>
         </div>
       </section>
 
@@ -448,10 +448,10 @@
 
     <!-- Модальне вікно -->
 
-    <button data-modal-open>Відкрити модальне вікно</button>
+    
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="close-modal-btn" type="button data-modal-close">
+        <button class="close-modal-btn" data-modal-close type="button">
           <svg class="close-icon" width="11" height="11">
             <use href="./icons.svg#icon-cross"></use>
           </svg>
@@ -459,7 +459,7 @@
         </button>
       </div>
     </div>
-    <button data-modal-close>Закрити</button>
+  
 
     <script src="./js/modal.js"></script>
   </body>
