@@ -79,8 +79,6 @@ img {
 .header-nav {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .logo {
@@ -111,6 +109,11 @@ img {
 }
 
 .nav-link {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+  height: 80px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -124,16 +127,14 @@ img {
   color: var(--accent-color);
 }
 .current {
-  position: relative;
   color: var(--accent-color);
 }
 .current::after {
   content: "";
-  position: absolute;
-  bottom: -200%;
-  left: 0;
-
   display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   border-radius: 4px;
@@ -163,8 +164,12 @@ img {
   print-color-adjust: var(--accent-color);
 }
 .nav-cont {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
   display: flex;
   align-items: center;
+  height: 80px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -181,6 +186,17 @@ img {
 .nav-cont:focus .header-img {
   fill: var(--accent-color);
 }
+/* .nav-cont-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: transparent;
+} */
 /* Герой */
 
 .hero {
@@ -194,7 +210,7 @@ img {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../photo/studio-bgimage.jpg);
+    url(../images/photo/studio-bgimage.jpg);
 
   margin-left: auto;
   margin-right: auto;
@@ -280,25 +296,25 @@ img {
   height: 120px;
 }
 .icon-antenna {
-  background-image: url(../icons/antenna.svg);
+  background-image: url(../images/icons/antenna.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
 .icon-clock {
-  background-image: url(../icons/clock.svg);
+  background-image: url(../images/icons/clock.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
 .icon-diagram {
-  background-image: url(../icons/diagram.svg);
+  background-image: url(../images/icons/diagram.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
 .icon-austronavt {
-  background-image: url(../icons/austronavt.svg);
+  background-image: url(../images/icons/austronavt.svg);
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
@@ -580,9 +596,13 @@ img {
 }
 
 .portfolio-works-item {
-  /* position: relative; */
   width: 370px;
 }
+.portfolio-works-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-link {
   display: block;
   transition-property: transform, box-shadow;
@@ -590,10 +610,7 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-.portfolio-link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .portfolio-works-container {
   position: relative;
   overflow: hidden;
